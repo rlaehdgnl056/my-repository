@@ -1,57 +1,95 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            .background1{background-color:#ECE9F2;width: 1000px;height: 4000px;}
-            .base-set{text-align: center; font-style:normal;}
-            .base-left  {text-align: left}
-            #white-box{width: 900px;height: 2000px;background-color: white;}
-            #color1{color: red;}
-            #textleft{text-align: left;}
+<head>
+    <style>
+        /* 배경 전체를 화면 꽉 채우고, 가운데 정렬하는 래퍼 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
 
+        .background1 {
+            background-color: #ECE9F2;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 30px;
+            padding-bottom: 100px;
+        }
 
-            #box1{width: 800px ; height: 350px; background-color: white; text-align: center;
-                border-radius:20px ;border-color: white; border-top: 10px solid purple;
-                margin-left: 100px;padding: 20px;} 
-                
+        .base-left {
+            text-align: left;
+        }
 
-            #box2{width: 800px ; height: 300px; background-color: white; text-align: center;
-                border-radius:20px ;border-color: white; margin-left: 100px; margin-top: 20px;;padding: 20px;}
+        #color1 {
+            color: red;
+        }
 
+        /* 박스 공통 스타일 */
+        #box1, #box2, #box3, #box4 {
+            width: 800px;
+            background-color: white;
+            border-radius: 20px;
+            border-color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-            #box3{width: 800px ; height: 280px; background-color: white; text-align: center;
-                border-radius:20px ;border-color: white; margin-left: 100px; margin-top: 20px;;padding: 20px;}
+        #box1 {
+            height: 350px;
+            border-top: 10px solid purple;
+        }
 
+        #box2 {
+            height: 300px;
+        }
 
-            #box4{width: 800px ; height: 250px; background-color: white; text-align: center;
-                border-radius:20px ;border-color: white; margin-left: 100px; margin-top: 20px;;padding: 20px;}
+        #box3 {
+            height: 280px;
+        }
 
+        #box4 {
+            height: 250px;
+        }
 
+        .button1 {
+            margin-top: 20px;
+        }
 
-            .button1 input[type="button"] {color: purple; padding: 15px 30px; margin-left: 100px;}
+        .button1 a input[type="button"] {
+            color: purple;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 2px solid purple;
+            background-color: white;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
 
-
-
-
-
-
-        </style>
-    </head> 
-    <body>
-        <div class="background1">
-
+        .button1 a input[type="button"]:hover {
+            background-color: #f3e6ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="background1">
 
         <div id="box1">            
             <div class="base-left">
                 <h1>[카카오 T 제휴 법인택시회사]T크루 모집 접수</h1><br>
                 *본 모집 공고는 카카오 T 제휴 법인 택시회사의 크루 채용 안내로서, 채용 안내를 돕기 위한<br>
                 지원 양식입니다.<br> 
-            *본 지원 접수가 취업을 보장하지 않습니다. (지원 시점 및 택시회사 TO에 따라 면접 배정. 취업<br>
-             여부는 택시회사의 판단에 따름)</div>
+                *본 지원 접수가 취업을 보장하지 않습니다. (지원 시점 및 택시회사 TO에 따라 면접 배정. 취업<br>
+                여부는 택시회사의 판단에 따름)
+            </div>
             <div id="color1" class="base-left">
-            <br><br>* 필수항목
+                <br><br>* 필수항목
             </div>
         </div>
-
 
         <div id="box2">
             <div class="base-left">
@@ -67,46 +105,37 @@
             </div>
         </div>
 
-
         <div id="box3">
             <div class="base-left">
                 <br>
                 <h3>[카카오 T 제휴 법인택시회사 모집 접수] 개인정보 수집 및 이용에 관한 동의 *</h3>
                 1. 수집 및 이용목적 : 본인확인 및 전화, 문자메시지 등을 통한 채용전형 안내, 일체의 문의사항 및 공지사항<br>
                 전달, 택시기사 자격여부 확인, 기타 채용전형과 관련된 사항 2. 개인정보 항목 : 성명, 주소, 연락처, 생년월일,<br>
-                경력사항(택시기사 자격유무 등) 3. 개인정보 수집 및 이용기간 : 채용 전형절차 완료 시까지 채용 전형절차는<br>
-                는데 동의해야 합니다. 본 동의는 서비스를 이용하는 최소한의 개인정보를 수집하며, 동의 거부 시 서비스 이<br>
+                경력사항(택시기사 자격유무 등) 3. 개인정보 수집 및 이용기간 : 채용 전형절차 완료 시까지<br>
                 최대 3개월 소요
                 <br><br>
                 <input type="checkbox">동의합니다.
             </div>
         </div>
-
 
         <div id="box4">
             <div class="base-left">
                 <br>
                 <h3>[카카오 T 제휴 법인택시회사 모집 접수] 개인정보 위탁 *</h3>
-                1. 수탁업체 : (주)티제이파트너스, (주)카카오모빌리티, (주)케이엠솔루션 2. 위탁내용 : 택시 기사 모집 및 상<br>
+                1. 수탁업체 : (주)티제이파트너스, (주)카카오모빌리티, (주)케이엠솔루션<br>
+                2. 위탁내용 : 택시 기사 모집 및 상담 업무 대행<br>
                 최대 3개월 소요
-             
-            
                 <br><br>
                 <input type="checkbox">동의합니다.
             </div>
         </div>
-        <br>
-
-
 
         <div class="button1">
             <a href="kakao2.html">
-            <input type="button" value="다음">
+                <input type="button" value="다음">
             </a>
         </div>
 
-
-
-        </div>
-    </body>
+    </div>
+</body>
 </html>
